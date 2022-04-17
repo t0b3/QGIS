@@ -5,6 +5,9 @@ on:
     branches:
       - master
       - release-**
+      - fix-**
+      - test-**
+      - debug-**
       - queued_ltr_backports
     paths:
     - 'src/**'
