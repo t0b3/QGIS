@@ -475,6 +475,8 @@ void TestQgsEptProvider::testIdentify()
       expected.push_back( point );
     }
 
+    qDebug() << "identifiedPoints: " << identifiedPoints;
+    qDebug() << "expected: " << expected;
     QVERIFY( identifiedPoints == expected );
   }
 }
@@ -584,6 +586,8 @@ void TestQgsEptProvider::testExtraBytesAttributesValues()
       expectedPoints.push_back( point );
     }
 
+    qDebug() << "identifiedPoints: " << identifiedPoints;
+    qDebug() << "expectedPoints: " << expectedPoints;
     QCOMPARE( identifiedPoints, expectedPoints );
   }
 }
