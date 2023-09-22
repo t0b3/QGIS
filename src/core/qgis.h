@@ -4861,6 +4861,7 @@ typedef unsigned long long qgssize;
 #endif
 #endif
 
+#ifndef FALLTHROUGH
 #if __cplusplus >= 201500
 #define FALLTHROUGH [[fallthrough]];
 #elif defined(__clang__)
@@ -4869,6 +4870,7 @@ typedef unsigned long long qgssize;
 #define FALLTHROUGH [[gnu::fallthrough]];
 #else
 #define FALLTHROUGH
+#endif
 #endif
 
 // see https://infektor.net/posts/2017-01-19-using-cpp17-attributes-today.html#using-the-nodiscard-attribute
