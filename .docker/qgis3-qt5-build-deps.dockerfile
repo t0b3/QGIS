@@ -1,5 +1,5 @@
 
-ARG DISTRO_VERSION=22.04
+ARG DISTRO_VERSION=24.04
 
 # Oracle Docker image is too large, so we add as less dependencies as possible
 # so there is enough space on GitHub runner
@@ -27,16 +27,16 @@ RUN  apt-get update \
     gnupg \
     gpsbabel \
     graphviz \
-    libaio1 \
-    libdraco4 \
+    libaio1t64 \
+    libdraco8 \
     libexiv2-27 \
-    libfcgi0ldbl \
+    libfcgi0t64 \
     libgsl27 \
-    'libprotobuf-lite17|libprotobuf-lite23' \
+    libprotobuf-lite32t64 \
     libqca-qt5-2-plugins \
     libqt53dextras5 \
     libqt53drender5 \
-    libqt5concurrent5 \
+    libqt5concurrent5t64 \
     libqt5keychain1 \
     libqt5positioning5 \
     libqt5multimedia5 \
@@ -48,15 +48,14 @@ RUN  apt-get update \
     libqt5serialport5 \
     libqt5sql5-odbc \
     libqt5sql5-sqlite \
-    libqt5xml5 \
+    libqt5xml5t64 \
     libqt5webkit5 \
     libqwt-qt5-6 \
     libspatialindex6 \
     libsqlite3-mod-spatialite \
-    'libzip4|libzip5' \
+    libzip4t64 \
     lighttpd \
     locales \
-    pdal \
     poppler-utils \
     python3-future \
     python3-gdal \
@@ -114,7 +113,7 @@ RUN  apt-get update \
 # Node.js and Yarn for server landingpage webapp
 RUN mkdir -p /etc/apt/keyrings
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
+RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
 RUN apt-get update
 RUN apt-get install -y nodejs
 RUN corepack enable
