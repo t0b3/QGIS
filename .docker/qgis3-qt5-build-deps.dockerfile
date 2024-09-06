@@ -1,5 +1,5 @@
 
-ARG DISTRO_VERSION=22.04
+ARG DISTRO_VERSION=24.04
 
 # Oracle Docker image is too large, so we add as less dependencies as possible
 # so there is enough space on GitHub runner
@@ -27,7 +27,7 @@ RUN  apt-get update \
     gnupg \
     gpsbabel \
     graphviz \
-    libaio1 \
+    libaio1t64 \
     libdraco4 \
     libexiv2-27 \
     libfcgi0ldbl \
