@@ -56,7 +56,6 @@ RUN  apt-get update \
     libzip4t64 \
     lighttpd \
     locales \
-    pdal \
     poppler-utils \
     python3-future \
     python3-gdal \
@@ -93,6 +92,7 @@ RUN  apt-get update \
     xfonts-scalable \
     xvfb \
     ocl-icd-libopencl1 \
+  && conda install pdal \
   && pip3 install \
     numpy \
     nose2 \
