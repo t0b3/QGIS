@@ -92,7 +92,7 @@ RUN  apt-get update \
     xfonts-scalable \
     xvfb \
     ocl-icd-libopencl1 \
-  && conda install pdal \
+  && conda install -c conda-forge pdal python-pdal gdal \
   && pip3 install \
     numpy \
     nose2 \
