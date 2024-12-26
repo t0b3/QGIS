@@ -57,5 +57,6 @@ try:
     import PyQt5.sip
 
     print("pyqt_sip_module:PyQt5.sip")
+    print("pyqt_sip_version_str:%s" % PyQt5.sip.SIP_VERSION_STR)
 except:
     print("pyqt_sip_module:sip")

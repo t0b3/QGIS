@@ -56,5 +56,6 @@ try:
     import PyQt6.sip
 
     print("pyqt_sip_module:PyQt6.sip")
+    print("pyqt_sip_version_str:%s" % PyQt6.sip.SIP_VERSION_STR)
 except Exception as e:
     print("pyqt_sip_module:sip")
