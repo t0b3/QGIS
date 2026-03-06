@@ -43,7 +43,9 @@ class ANALYSIS_EXPORT QgsGraphAnalyzer
 #ifndef SIP_RUN
     static void dijkstra( const QgsGraph *source, int startVertexIdx, int criterionNum, QVector<int> *resultTree = nullptr, QVector<double> *resultCost = nullptr );
 #else
-    static SIP_PYOBJECT dijkstra( const QgsGraph *source, int startVertexIdx, int criterionNum, QVector<int> *resultTree SIP_DOCSTRING_OUT = nullptr, QVector<double> *resultCost SIP_DOCSTRING_OUT = nullptr ) SIP_TYPEHINT( Tuple[List[int], List[float]] );
+    static SIP_PYOBJECT dijkstra(
+      const QgsGraph *source, int startVertexIdx, int criterionNum, QVector<int> *resultTree SIP_DOCSTRING_OUT = nullptr, QVector<double> *resultCost SIP_DOCSTRING_OUT = nullptr
+    ) SIP_TYPEHINT( Tuple[List[int], List[float]] );
     //%MethodCode
     QVector<int> treeResult;
     QVector<double> costResult;
